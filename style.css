@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 20vh 80vh;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+.header {
+  background-color: blueviolet;
+  grid-area: header;
+}
+
+.sidebar {
+  background-color: midnightblue;
+  grid-area: sidebar;
+}
+
+.main {
+  background-color: crimson;
+  grid-area: main;
+}
