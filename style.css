@@ -16,10 +16,11 @@ body {
   grid-template-areas:
     "sidebar header"
     "sidebar main";
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
-  background-color:white;
+  background-color: white;
   grid-area: header;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -30,12 +31,13 @@ body {
 }
 
 .sidebar {
-  background-color:#4491CF;
+  background-color: #4491cf;
   grid-area: sidebar;
+  color: white;
 }
 
 .main {
-  background-color: #E3E8EF;
+  background-color: #e3e8ef;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-area: main;
@@ -45,7 +47,7 @@ body {
 .search {
   /* display: flex;
   gap: 10px; */
-  display:grid;
+  display: grid;
   column-gap: 10px;
   grid-template-columns: min-content 1fr;
 }
@@ -61,7 +63,7 @@ body {
   gap: 30px;
   align-items: center;
   justify-content: center; */
-  display:grid;
+  display: grid;
   grid-template-columns: max-content max-content max-content;
   column-gap: 20px;
   align-items: center;
@@ -101,13 +103,15 @@ p {
   padding: 25px;
 }
 
-.sidebar-actions, .sidebar-help {
+.sidebar-actions,
+.sidebar-help {
   display: grid;
-  gap:15px;
+  gap: 20px;
 }
 
 h1 {
   margin: 0;
+  
 }
 
 .projects-posts {
@@ -118,10 +122,12 @@ h1 {
 
 p {
   margin: 0;
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
-.announcements-list, .trending-list, .post {
+.announcements-list,
+.trending-list,
+.post {
   background-color: white;
   border-radius: 12px;
 }
@@ -135,4 +141,22 @@ p {
   grid-template-columns: auto auto;
   justify-content: start;
   gap: 25px;
+}
+h1 svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+svg {
+  fill: white;
+  width: 22px;
+  height: 22px;
+  margin-right: 15px;
+  vertical-align: bottom;
+}
+
+.sidebar-actions div, .sidebar-help div {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
