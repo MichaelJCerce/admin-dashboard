@@ -19,7 +19,7 @@ body {
 }
 
 .header {
-  background-color: blueviolet;
+  background-color:aqua;
   grid-area: header;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -30,7 +30,7 @@ body {
 }
 
 .sidebar {
-  background-color: midnightblue;
+  background-color:coral;
   grid-area: sidebar;
 }
 
@@ -88,5 +88,21 @@ body {
 }
 
 p {
+  margin: 0;
+}
+
+.sidebar {
+  display: grid;
+  align-content: start;
+  gap: 50px;
+  padding: 25px;
+}
+
+.sidebar-actions, .sidebar-help {
+  display: grid;
+  gap:15px;
+}
+
+h1 {
   margin: 0;
 }
