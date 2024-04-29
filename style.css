@@ -21,6 +21,12 @@ body {
 .header {
   background-color: blueviolet;
   grid-area: header;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 45px;
+  row-gap: 30px;
+  padding-block: 20px;
+  padding-inline: 45px;
 }
 
 .sidebar {
@@ -31,4 +37,56 @@ body {
 .main {
   background-color: crimson;
   grid-area: main;
+}
+
+.search {
+  /* display: flex;
+  gap: 10px; */
+  display:grid;
+  column-gap: 10px;
+  grid-template-columns: min-content 1fr;
+}
+
+.search-bar {
+  flex: 1;
+  background-color: blue;
+  border-radius: 3px;
+}
+
+.profile-info {
+  /* display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center; */
+  display:grid;
+  grid-template-columns: max-content max-content max-content;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-welcome {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  gap: 5px;
+}
+
+.header-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  align-items: center;
+  /* display:flex;
+  align-items: center;
+  justify-content: center;
+  gap: 75px; */
+}
+
+.header-actions buttons {
+  border-radius: 12px;
+}
+
+p {
+  margin: 0;
 }
