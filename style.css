@@ -17,6 +17,7 @@ body {
     "sidebar header"
     "sidebar main";
   font-family: "Roboto", sans-serif;
+  
 }
 
 .header {
@@ -24,7 +25,7 @@ body {
   grid-area: header;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  padding-inline: 70px;
+  padding-inline: 40px;
   align-items:center;
 }
 
@@ -37,9 +38,11 @@ body {
 .main {
   background-color: #e3e8ef;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 225px;
   grid-area: main;
   column-gap: 20px;
+  padding-inline: 25px;
+  overflow: scroll;
 }
 
 .search {
@@ -90,8 +93,6 @@ body {
   grid-template-columns: repeat(3, auto);
   justify-items: center;
   gap: 10px;
-  /* padding-inline: 50px; */
-  /* padding-right: 40px; */
 }
 
 .header-actions buttons {
@@ -121,8 +122,9 @@ h1 {
 
 .projects-posts {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: start;
 }
 
 p {
@@ -138,8 +140,16 @@ p {
 }
 
 .post {
-  border-left: 5px solid yellow;
+  border-left: 8px solid #e0b048;
+  padding-inline: 15px;
+  padding-block: 25px;
 }
+
+.post h2{
+  font-size: 18px;
+  margin: 2px;
+}
+
 
 .trending-profile {
   display: grid;
@@ -147,6 +157,7 @@ p {
   justify-content: start;
   gap: 25px;
 }
+
 .sidebar h1 svg {
   width: 40px;
   height: 40px;
@@ -208,7 +219,6 @@ button {
 }
 
 .header-welcome {
-  
   font-weight: bold;
   display: grid;
   row-gap: 10px;
@@ -224,9 +234,95 @@ button {
   font-size: 24px;
 }
 
+.icons {
+  display:grid;
+  grid-template-columns: repeat(3,auto);
+  justify-content: end;
+  gap: 20px;
+}
+
+.icons svg {
+  width:25px;
+  height:25px;
+}
+
+.post p {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.main h2 {
+  font-size: 20px;
+}
+
+.announcements-list h4{
+  margin: 0px;
+  font-size: 14px;
+}
+
+.announcements-list p {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+
+.announcements-list :last-child p{
+  border-bottom:none;
+  padding-bottom:0;
+}
+.announcements-list div:last-child {
+  margin: 0;
+}
+
+.announcements-list div {
+  margin-bottom: 10px;
+}
+
+.announcements-list {
+  padding-block: 30px;
+  padding-inline: 30px;
+}
+
+.trending-list {
+  padding:10px;
+  display: grid;
+  gap: 15px;
+}
+
+.trending-profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  
+}
+.trending-profile .profile-picture {
+  align-self:center;
+  width:40px;
+  height:40px;
+}
+
+.user-info h5 {
+  margin:0;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.trending-profile:nth-of-type(1) .profile-picture {
+  background-color: crimson;
+}
+.trending-profile:nth-of-type(2) .profile-picture {
+  background-color: magenta;
+}
+.trending-profile:nth-of-type(3) .profile-picture {
+  background-color: blueviolet;
+}
+.trending-profile:nth-of-type(4) .profile-picture {
+  background-color: salmon;
+}
+
+
+
 @media (min-width: 1000px) {
   .header-actions {
-    
     gap:20px;
     justify-self:end;
   }
